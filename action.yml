@@ -1,0 +1,18 @@
+name: "AWS SAM CLI Execute"
+description: "Execute SAM CLI commands"
+
+branding:
+  icon: "cloud"
+  color: "orange"
+
+inputs:
+  cmd:
+    description: "bin/bash command"
+    required: true
+    default: "sam --version"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.cmd }}
