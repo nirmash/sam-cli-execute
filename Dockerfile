@@ -1,4 +1,4 @@
-FROM amazon/aws-sam-cli-build-image-python3.8
+FROM amazon/aws-sam-cli-build-image-go1.x
 
 WORKDIR /var/src
 
